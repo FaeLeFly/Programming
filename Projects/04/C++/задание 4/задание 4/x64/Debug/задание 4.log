@@ -1,5 +1,0 @@
-﻿  Source.cpp
-C:\Users\contr\Desktop\1 курс\Visual Studio][проекты\задание 4\задание 4\Source.cpp(1,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-C:\Users\contr\Desktop\1 курс\Visual Studio][проекты\задание 4\задание 4\Source.cpp(12,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-C:\Users\contr\Desktop\1 курс\Visual Studio][проекты\задание 4\задание 4\Source.cpp(13,5): error C2084: функция "int main(void)" уже имеет текст реализации
-C:\Users\contr\Desktop\1 курс\Visual Studio][проекты\задание 4\задание 4\Source.cpp(2): message : см. предыдущее определение "main"
