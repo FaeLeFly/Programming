@@ -1,4 +1,5 @@
 #include <iostream>;
+#include <string>;
 using namespace std;
 int main() {
 	const char size = 10;
@@ -7,6 +8,7 @@ int main() {
 	char sh[10];
 	int n;
 	cin >> n;
+	string *pos= new string [n];
 	int b = n;
 	while (n > 0) {
 		n--;
@@ -19,8 +21,9 @@ int main() {
 				break;
 			}
 		}
+		pos[n] = hs;
 	}
 	if (b == n) cout << "-1";
-	else cout << hs;
+	else  for (int i = 0; i < b; i++) cout << pos[i]<< " ";
 	return 0;
 }
