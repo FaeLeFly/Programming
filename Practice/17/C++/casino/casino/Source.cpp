@@ -5,7 +5,7 @@ int main() {
 	int i = 0;
 	int set[cell];
 	int tes[cell];
-	int count,last,black,red,stop;
+	int count,last,black,red;
 	count = last = black = red = i;
 	for (int j = 0; j < cell; j++) {
 		set[j] = 0;
