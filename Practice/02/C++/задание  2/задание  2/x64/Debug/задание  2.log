@@ -1,4 +1,0 @@
-﻿  Source.cpp
-C:\Users\contr\Desktop\1 курс\Visual Studio][проекты\задание  2\задание  2\Source.cpp(1,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-C:\Users\contr\Desktop\1 курс\Visual Studio][проекты\задание  2\задание  2\Source.cpp(5,8): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
-  задание  2.vcxproj -> C:\Users\contr\Desktop\1 курс\Visual Studio][проекты\задание  2\x64\Debug\задание  2.exe
