@@ -1,6 +1,0 @@
-﻿  Source.cpp
-C:\Users\contr\Desktop\1 курс\Visual Studio][проекты\likelihood\likelihood\Source.cpp(1,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-C:\Users\contr\Desktop\1 курс\Visual Studio][проекты\likelihood\likelihood\Source.cpp(2,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-C:\Users\contr\Desktop\1 курс\Visual Studio][проекты\likelihood\likelihood\Source.cpp(23,12): warning C4553: "==": результат выражения не используется; вы хотели использовать "="?
-C:\Users\contr\Desktop\1 курс\Visual Studio][проекты\likelihood\likelihood\Source.cpp(26,27): warning C4804: >: небезопасное использование типа "bool" в операции
-  likelihood.vcxproj -> C:\Users\contr\Desktop\1 курс\Visual Studio][проекты\likelihood\x64\Debug\likelihood.exe
