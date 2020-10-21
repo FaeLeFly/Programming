@@ -1,0 +1,6 @@
+﻿  Source.cpp
+C:\Users\contr\Desktop\1 курс\Visual Studio][проекты\inovation\inovation\Source.cpp(1,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\contr\Desktop\1 курс\Visual Studio][проекты\inovation\inovation\Source.cpp(2,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\contr\Desktop\1 курс\Visual Studio][проекты\inovation\inovation\Source.cpp(3,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\contr\Desktop\1 курс\Visual Studio][проекты\inovation\inovation\Source.cpp(8,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  inovation.vcxproj -> C:\Users\contr\Desktop\1 курс\Visual Studio][проекты\inovation\x64\Debug\inovation.exe
