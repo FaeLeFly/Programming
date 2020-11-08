@@ -29,4 +29,4 @@
 | Практическая 21- [[C++]](./Practice/21/C++/) [<s>[Python]</s>](./Practice/21/Python/) |
 | Практическая 22- [[C++]](./Practice/22/C++/) [<s>[Python]</s>](./Practice/22/Python/) |
 
-![](https://i.gifer.com/7VE.gif)
+![](https://images.noob-club.ru/news/2018/07/615/5efc61p6m8.png )
