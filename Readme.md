@@ -28,4 +28,5 @@
 | Практическая 20- [[C++]](./Practice/20/C++/) [<s>[Python]</s>](./Practice/20/Python/) |
 | Практическая 21- [[C++]](./Practice/21/C++/) [<s>[Python]</s>](./Practice/21/Python/) |
 | Практическая 22- [[C++]](./Practice/22/C++/) [<s>[Python]</s>](./Practice/22/Python/) |
-![](https://i.gifer.com/7VE.gif )
+| Практическая 23- [[C++]](./Practice/23/C++/) |
+
