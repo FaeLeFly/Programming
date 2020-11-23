@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-void allLexicographicRecur(string alph, char* perm, int last, int index)
+void Recur(string alph, char* perm, int last, int index)
 {
 	int len = alph.length();
 
@@ -33,7 +33,7 @@ void allLexicographicRecur(string alph, char* perm, int last, int index)
 		}
 		else
 		{
-			allLexicographicRecur(alph, perm, last, index + 1);
+			Recur(alph, perm, last, index + 1);
 		}
 	}
 }
@@ -44,6 +44,6 @@ int main()
 	cin >> n >> alph;
 	char* perm = new char[n + 1];
 	perm[n] = '\0';
-	allLexicographicRecur(alph, perm, n - 1, 0);
+	Recur(alph, perm, n - 1, 0);
 	return 0;
 }
