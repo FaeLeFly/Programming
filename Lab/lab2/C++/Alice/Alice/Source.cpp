@@ -273,11 +273,9 @@ void gen_response(const Request& req, Response& res) {
                     str =j["webhooks"][i];
                     if (str.find('/', mayk.size())!=std::string::npos) {
                         dil = str.find('/', mayk.size());
-                        std::cout << str << std::endl;
                     }
                     else {
                         str += "/";
-                        std::cout << str;
                         dil = str.find('/', mayk.size());
                     }
                     str2 = str.substr(0, dil);
