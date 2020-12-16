@@ -138,7 +138,7 @@ void gen_response(const Request& req, Response& res) {
             jxon["response"]["tts"] = "ОК";
             if (j["state"]["session"]["value"].get<int>() == 5) {
                 jxon["response"]["buttons"][1]["title"] = "Говорить";
-                jxon["response"].erase("tts");
+                jxon["response"]["tts"] = "sil <[500]>";
                 jxon["session_state"].push_back({ "value",5 });
             }
             else {
@@ -169,7 +169,7 @@ void gen_response(const Request& req, Response& res) {
             }
             if (j["state"]["session"]["value"].get<int>() == 5) {
                 jxon["response"]["buttons"][1]["title"] = "Говорить";
-                jxon["response"].erase("tts");
+                jxon["response"]["tts"] = "sil <[500]>";
                 jxon["session_state"].push_back({ "value",5 });
             }
             else {
@@ -199,7 +199,7 @@ void gen_response(const Request& req, Response& res) {
             }
             if (j["state"]["session"]["value"].get<int>() == 5) {
                 jxon["response"]["buttons"][1]["title"] = "Говорить";
-                jxon["response"].erase("tts");
+                jxon["response"]["tts"] = "sil <[500]>";
                 jxon["session_state"].push_back({ "value",5 });
             }
             else {
@@ -222,7 +222,7 @@ void gen_response(const Request& req, Response& res) {
             jxon["response"]["tts"] = "Корзина пуста.";
             if (j["state"]["session"]["value"].get<int>() == 5) {
                 jxon["response"]["buttons"][1]["title"] = "Говорить";
-                jxon["response"].erase("tts");
+                jxon["response"]["tts"] = "sil <[500]>";
                 jxon["session_state"].push_back({ "value",5 });
             }
             else {
@@ -244,7 +244,7 @@ void gen_response(const Request& req, Response& res) {
         jxon["response"]["tts"] = sum;
         if (j["state"]["session"]["value"].get<int>() == 5) {
             jxon["response"]["buttons"][1]["title"] = "Говорить";
-            jxon["response"].erase("tts");
+            jxon["response"]["tts"] = "sil <[500]>";
             jxon["session_state"].push_back({ "value",5 });
         }
         else {
@@ -262,20 +262,33 @@ void gen_response(const Request& req, Response& res) {
             else {
                 rev["user_id"] = "anonymous";
             }
-
             std::ifstream l("config.json");
 
            if (l.is_open()) {
+               int dil;
                 std::string str, str2;
                 json j = json::parse(l);
                 std::string mayk = "http://";
                 for (int i = 0; i < j["webhooks"].size(); i++) {
                     str =j["webhooks"][i];
-                    int dil = str.find('/', mayk.size());
+                    if (str.find('/', mayk.size())!=std::string::npos) {
+                        dil = str.find('/', mayk.size());
+                        std::cout << str << std::endl;
+                    }
+                    else {
+                        str += "/";
+                        std::cout << str;
+                        dil = str.find('/', mayk.size());
+                    }
                     str2 = str.substr(0, dil);
                     Client cli(str2.c_str());
                     str2= str.substr(dil, -1);
                     cli.Post(str2.c_str(), rev.dump(4), "application/json");
+                    for (int i = 0; i < rev["check"].size();) {
+                        rev["check"].erase(rev["check"].begin() + i);
+                    }
+                    std::ofstream o_O("buy.json");
+                    o_O << std::setw(4) << rev << std::endl;
                 }
            }
 
@@ -290,7 +303,7 @@ void gen_response(const Request& req, Response& res) {
         res.set_content(jxon.dump(4), "text/json; charset=UTF-8");
         }
         else if ((j["request"]["command"].get<std::string>() == "молчать") && (j["state"]["session"]["name"].get<std::string>() == "menu")) {
-            jxon["response"].erase("tts");
+            jxon["response"]["tts"] = "sil <[500]>";
             jxon["session_state"].push_back({ "value",5 });
             jxon["session_state"].push_back({ "name","menu" });
             jxon["response"]["text"] = "Молчу, молчу";
@@ -370,7 +383,7 @@ void gen_response(const Request& req, Response& res) {
                 if (j["request"]["command"].get<std::string>() == "выйти") {
                     jxon["response"]["buttons"][1]["title"] = "Говорить";
                 }
-                jxon["response"].erase("tts");
+                jxon["response"]["tts"] = "sil <[500]>";
                 jxon["session_state"].push_back({ "value",5 });
             }
             else {
@@ -385,7 +398,7 @@ void gen_response(const Request& req, Response& res) {
         else {
             jxon["response"]["text"] = "Неизвестная команда.";
             if (j["state"]["session"]["value"].get<int>() == 5) {
-                jxon["response"].erase("tts");
+                jxon["response"]["tts"] = "sil <[500]>";
                 jxon["session_state"].push_back({ "value",5 });
             }
             else {
@@ -407,7 +420,7 @@ void gen_response(const Request& req, Response& res) {
 
 
 int main() {
-    Server svr;         
+    Server svr;       
     svr.Get("/webhooks", gen_webhook);
     svr.Post("/webhooks", posn_webhook);
     svr.Post("/", gen_response);     
