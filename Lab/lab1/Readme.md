@@ -47,7 +47,7 @@ http://api.openweathermap.org/data/2.5/onecall?&appid=0d58c50a9d9b684efce1459b5c
 
 ![Рис. 1.1](./image/jsonlog.png)
 
-<center> <i> Рисунок 1.1. Полученный запрос с сайта для формата JSON. </center>
+<center> <i> Рисунок 1.1. Полученный запрос с сайта для формата JSON. </i></center>
 
 ### Задание 2
 
@@ -182,13 +182,13 @@ root.mainloop()
 
 ![Рис. 1.2](./image/pyinter.png)
 
-<center> <i> Рисунок 1.2. Графический интерфейс. </center>
+<center> <i> Рисунок 1.2. Графический интерфейс. </i></center>
 
 Скриншон браузера с загруженным виджетом:
 
 ![Рис. 1.3](./image/vidjethtml.png)
 
-<center> <i> Рисунок 1.3. Браузер с виджетом. </center>
+<center> <i> Рисунок 1.3. Браузер с виджетом. </i></center>
 
 ## Вывод по работе. 
 
