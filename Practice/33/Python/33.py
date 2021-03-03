@@ -13,6 +13,7 @@ def sort(ci):
 def printf(ci):
     for i in range (len(ci)):
         print(ci[i])
+    return ci
 def create(m,first,ranges):
     ci=[]
     for i in range(m):

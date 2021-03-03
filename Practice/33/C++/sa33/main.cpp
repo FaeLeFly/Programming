@@ -28,6 +28,7 @@ int print(int *ci,int m){
     for (int i=0;i<m;i++){
         std::cout<<ci[i];
     }
+    return *ci;
 }
 int main(){
     int m,first,range;
