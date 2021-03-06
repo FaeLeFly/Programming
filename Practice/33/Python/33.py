@@ -1,3 +1,4 @@
+_print=print
 def sort(ci):
     ne=int()
     for i in range (len(ci)):
@@ -10,9 +11,9 @@ def sort(ci):
                 continue
     return ci
         
-def printf(ci):
+def print(ci):
     for i in range (len(ci)):
-        print(ci[i])
+        _print(ci[i])
     return ci
 def create(m,first,ranges):
     ci=[]
@@ -27,4 +28,4 @@ def create(m,first,ranges):
 m,first,ranges=int(input()),int(input()),int(input())
 ci=create(m,first,ranges)
 ci=sort(ci)
-printf(ci)
+print(ci)
