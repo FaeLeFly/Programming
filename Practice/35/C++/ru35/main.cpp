@@ -5,7 +5,7 @@ struct IntArray {
 };
 
 int get(IntArray* arr, int index){
-   if (index<0 || index>arr->size){
+   if (index<0 || index>=arr->size){
        std::cout << "Error";
        abort();
    }
