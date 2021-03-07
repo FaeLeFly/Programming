@@ -1,5 +1,4 @@
 #include <iostream>
-#include  <stdlib.h>
 struct IntArray {
   int *data;
   int size;
