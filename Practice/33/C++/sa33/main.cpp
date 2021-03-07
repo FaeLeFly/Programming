@@ -26,7 +26,11 @@ int sort(int *ci,int m){
 }
 int print(int *ci,int m){
     for (int i=0;i<m;i++){
-        std::cout<<ci[i];
+        if (i!=m-1){
+            if (i==0)std::cout << "[";
+            std::cout<<ci[i]<<",";
+        }
+        else std::cout<<ci[i]<<"]";
     }
     return *ci;
 }
