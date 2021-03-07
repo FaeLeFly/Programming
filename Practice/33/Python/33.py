@@ -16,7 +16,9 @@ def print(ci):
         if i!=(len(ci)-1):
             if i==0:_print('[',end='')
             _print(str(ci[i])+',',end='')
-        else: _print (str(ci[i])+']')
+        else:
+            if i==0: _print ('['+str(ci[i])+']')
+            else:_print (str(ci[i])+']')
     return ci
 def create(m,first,ranges):
     ci=[]

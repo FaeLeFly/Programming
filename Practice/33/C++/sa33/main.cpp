@@ -30,8 +30,11 @@ int print(int *ci,int m){
             if (i==0)std::cout << "[";
             std::cout<<ci[i]<<",";
         }
-        else std::cout<<ci[i]<<"]";
-    }
+        else {
+            if(i==0) std::cout <<"["<<ci[i]<<"]";
+            else std::cout<<ci[i]<<"]";
+        }
+       }
     return *ci;
 }
 int main(){
