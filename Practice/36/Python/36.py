@@ -70,10 +70,6 @@ class Point:
         self.a2 = y
         self.coord_system ="Cartesian"
     def set_phi(self,phi):
-        if (self.coord_system == 'Polar'):
-            print ("net")
-            self.a2 = phi
-            return
         r = self.get_r()
         self.a1 = r
         self.a2 = phi
