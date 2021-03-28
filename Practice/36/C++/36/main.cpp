@@ -101,17 +101,6 @@ public:
         a2 = y;
         coord_system = Cartesian;
     }
-    void set_r(double r){
-        if (coord_system == Polar) {
-            a1 = r;
-            return;
-        }
-
-        double phi = get_phi();
-        a1 = r;
-        a2 = phi;
-        coord_system = Polar;
-    }
     void set_phi(double phi){
         if (coord_system == Polar) {
             a2 = phi;
