@@ -2,46 +2,37 @@ import math
 import copy
   
 class Point:
-    def __init__(self,a1=0,a2=0,coord_system="Cartesian",count=0):
+    def __init__(self,a1=0,a2=0,coord_system="Cartesian"):
         self.coord_system=coord_system
         self.a2=a2
         self.a1=a1
-        self.count=count
     def __eq__(self,other):
         x1=self.get_x()
         y1=self.get_y()
-        xy=other.get_x()
-        left=str.find(xy,'(')
-        right=str.find(xy,',')
-        x2=float(xy[left+1:right])
-        left=str.find(xy,',')
-        right=str.find(xy,')')
-        y2=float(xy[left+1:right])
-        if(math.fabs(x1-x2)<10**-10 and math.fabs(y1-y2)<10**-10): return True
+        if(math.fabs(x1-self.a1)<10**-10 and math.fabs(y1-self.a2)<10**-10): return True
         return False
     def __ne__(self,other):
         if (__eq__()):return False
         return True
     def __str__(self):
-        if (self.count!=0):
-            self.count=0
-            return '('+str(self.a1)+','+str(self.a2)+')'
-        texts=str(self.a1)
-        left=str.find(texts,'(')
-        right=str.find(texts,')')
-        _more=texts[left:right+1]
-        left=str.find(texts,'(')
-        right=str.find(texts,',')
-        self.a1=float(texts[left+1:right])
-        left=str.find(texts,',')
-        right=str.find(texts,')')
-        self.a2=float(texts[left+1:right])
-        return _more
+        if type(self.a1) == str:
+            return self.a1
+        else:
+            prrint="("+str(self.a1)+','+str(self.a2)+')'
+            return prrint
     def __repr__(self):
-        texts=str(self.a1)
-        return  texts
+        return  self.a1
     def get_x(self):
-        if(self.coord_system=="Cartesian"):return self.a1
+        if(self.coord_system=="Cartesian"):
+            if (type(self.a1)==str):
+                texts=self.a1
+                left=str.find(texts,'(')
+                right=str.find(texts,',')
+                self.a1=float(texts[left+1:right])
+                left=str.find(texts,',')
+                right=str.find(texts,')')
+                self.a2=float(texts[left+1:right])
+                return self.a1
         return (self.get_r()*math.cos(self.get_phi()))
     def get_y(self):
         if(self.coord_system=="Cartesian"):return self.a2
@@ -54,8 +45,6 @@ class Point:
         return math.atan2(self.a2, self.a1)
     def set_x(self,x):
         if (self.coord_system =="Cartesian"):
-            self.a1 = x
-            self.count+=1
             return
         y = self.get_y()
         self.a1 = x
@@ -69,6 +58,9 @@ class Point:
         self.a1 = x
         self.a2 = y
         self.coord_system ="Cartesian"
+    def set_r(self,r):
+            if coord_system == Polar:
+                self.a1 = r
     def set_phi(self,phi):
         r = self.get_r()
         self.a1 = r
