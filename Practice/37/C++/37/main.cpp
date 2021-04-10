@@ -134,7 +134,7 @@ class Vector {
             this->V[1]= end.get_y()-begin.get_y();
         }
         bool operator == (Vector other){
-            return (this->V==other.V);
+            return (fabs(this->V[0]-other.V[0])<1e-15 && fabs(this->V[1]-other.V[1])<1e-15);
         }
         Vector operator -(){
             Vector s;
